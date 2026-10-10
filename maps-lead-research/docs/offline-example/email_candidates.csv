@@ -1,0 +1,3 @@
+email_id,company_id,contact_id,email,status,provenance,deliverability,source_url,pattern_evidence,evidence_date
+email_93e4e97e4e44987b535d9e8e,co_cf3925d9a73da65dfb22409c,person_24ac68bb5d7e634ea626a934,jane.carter@example.com,public_named_email,public_source,unverified,https://example.com/team,[],2026-09-09T04:00:46+00:00
+email_a0441103f3341eb8bcc3b282,co_cf3925d9a73da65dfb22409c,person_b1cb2f27c1f7ceb9c013ee65,alan.wilson@example.com,public_named_email,public_source,unverified,https://example.com/team,[],2026-09-09T04:00:46+00:00

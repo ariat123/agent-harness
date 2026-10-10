@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "run_id": "run_ac2782b2e9c58c866eb39e79",
+  "campaign": "offline-fictional-example",
+  "started_at": "2026-09-09T04:00:46+00:00",
+  "discovery_status": "complete",
+  "research_status": "complete",
+  "provider_request_attempts": 3,
+  "net_new_companies": 1,
+  "observed_records": 1,
+  "discovery_stop_reason": "plan_exhausted",
+  "maps_requests": 1,
+  "updated_at": "2026-09-09T04:00:46+00:00",
+  "research_stop_reason": "",
+  "firecrawl_usage": {
+    "starting_balance": 100,
+    "ending_balance": 98,
+    "started_at": "2026-09-09T04:00:46+00:00"
+  },
+  "execution_mode": "offline_fictional_fixture",
+  "live_paid_calls": 0,
+  "output_company_count": 1,
+  "validation_valid": true
+}

@@ -1,0 +1,3 @@
+email,company_id,contact_id,provenance,source_url
+jane.carter@example.com,co_cf3925d9a73da65dfb22409c,person_24ac68bb5d7e634ea626a934,public_source,https://example.com/team
+alan.wilson@example.com,co_cf3925d9a73da65dfb22409c,person_b1cb2f27c1f7ceb9c013ee65,public_source,https://example.com/team

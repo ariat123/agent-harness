@@ -1,0 +1,71 @@
+{
+  "request_id": "request_0a3efa25d13a41dea68ad998",
+  "attempt": 1,
+  "status": "success",
+  "request": {
+    "query": "commercial signs",
+    "target": {
+      "value": "Seattle, WA",
+      "state": "WA",
+      "region": "West",
+      "tier": 0
+    },
+    "page": 1,
+    "country": "US",
+    "language": "en",
+    "requested_at": "2026-09-09T04:00:46+00:00"
+  },
+  "raw_path": "raw/maps/000001.json",
+  "interpretation": {
+    "version": 1,
+    "raw_sha256": "fa0f11884c07c3d426b0df5634e0b6b08d3ce8b89d91a6ee82769e6d0167c278",
+    "decisions": {
+      "obs_25270377b88b90dfbb9af6ef": {
+        "observation_id": "obs_25270377b88b90dfbb9af6ef",
+        "company_id": "co_cf3925d9a73da65dfb22409c",
+        "disposition": "included",
+        "reason": "net_new",
+        "matched_by": "same_run",
+        "location_id": "loc_e409e9002638276306cbcf78"
+      }
+    },
+    "company_snapshots": {
+      "co_cf3925d9a73da65dfb22409c": {
+        "company_id": "co_cf3925d9a73da65dfb22409c",
+        "company_name": "Example Sign Company (fictional fixture)",
+        "root_domain": "example.com",
+        "origin_run": "run_ac2782b2e9c58c866eb39e79",
+        "first_seen": "2026-09-09T04:00:46+00:00",
+        "last_seen": "2026-09-09T04:00:46+00:00",
+        "research_status": "pending",
+        "data": {
+          "place_id": "fixture-example-signs",
+          "company_name": "Example Sign Company (fictional fixture)",
+          "website": "https://example.com",
+          "root_domain": "example.com",
+          "phone": "+1 206 555 0100",
+          "address": "100 Example St, Seattle, WA 98101",
+          "street_address": "100 Example St",
+          "city": "Seattle",
+          "state": "WA",
+          "zip_code": "98101",
+          "rating": 4.8,
+          "review_count": "15",
+          "category": "Sign shop",
+          "categories": "Sign shop",
+          "google_maps_url": "https://www.google.com/maps/place/?q=place_id:fixture-example-signs",
+          "latitude": 47.6,
+          "longitude": -122.3,
+          "business_status": "OPERATIONAL",
+          "country": "US",
+          "query_used": "commercial signs",
+          "search_location": "Seattle, WA",
+          "timestamp": "2026-09-09T04:00:46+00:00",
+          "raw_response_path": "raw/maps/000001.json",
+          "source_index": 0,
+          "provider_country": ""
+        }
+      }
+    }
+  }
+}

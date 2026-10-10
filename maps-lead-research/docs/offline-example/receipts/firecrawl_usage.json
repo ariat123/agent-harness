@@ -1,0 +1,29 @@
+{
+  "starting_balance": 100,
+  "ending_balance": 98,
+  "operations": {
+    "fc_90b54f55b386bc4308594237": {
+      "id": "fc_90b54f55b386bc4308594237",
+      "url": "https://example.com/",
+      "raw_path": "./docs/offline-example/raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-1.json",
+      "status": "success",
+      "requested_at": "2026-09-09T04:00:46+00:00",
+      "accounted_credits": 1,
+      "balance_before": 100,
+      "provider_reported_credits": null,
+      "balance_after": 99
+    },
+    "fc_2c98b1cdb1036c6e15c42b31": {
+      "id": "fc_2c98b1cdb1036c6e15c42b31",
+      "url": "https://example.com/team",
+      "raw_path": "./docs/offline-example/raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-2.json",
+      "status": "success",
+      "requested_at": "2026-09-09T04:00:46+00:00",
+      "accounted_credits": 1,
+      "balance_before": 99,
+      "provider_reported_credits": null,
+      "balance_after": 98
+    }
+  },
+  "started_at": "2026-09-09T04:00:46+00:00"
+}

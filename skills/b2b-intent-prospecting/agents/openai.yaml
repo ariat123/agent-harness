@@ -1,0 +1,4 @@
+interface:
+  display_name: "B2B Intent Prospecting"
+  short_description: "Research account fit and source-backed signals"
+  default_prompt: "Use $b2b-intent-prospecting to research business accounts for the named seller using its offer, target buyers, and source-backed signals."

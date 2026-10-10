@@ -1,0 +1,22 @@
+{
+  "payload": {
+    "data": [
+      {
+        "place_id": "fixture-example-signs",
+        "name": "Example Sign Company (fictional fixture)",
+        "website": "https://example.com",
+        "full_address": "100 Example St, Seattle, WA 98101",
+        "city": "Seattle",
+        "state": "WA",
+        "postal_code": "98101",
+        "phone_number": "+1 206 555 0100",
+        "category": "Sign shop",
+        "review_count": 15,
+        "rating": 4.8,
+        "business_status": "OPERATIONAL",
+        "latitude": 47.6,
+        "longitude": -122.3
+      }
+    ]
+  }
+}

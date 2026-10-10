@@ -1,0 +1,6 @@
+interface:
+  display_name: "Account-Specific B2B Outreach"
+  short_description: "Natural account-specific copy for the selected AFT offer"
+  default_prompt: "Use $account-specific-b2b-outreach to prepare natural, source-backed account-specific emails for the selected AFT offer, keeping the paid product and any short-list preview distinct and stopping at local review."
+policy:
+  allow_implicit_invocation: true

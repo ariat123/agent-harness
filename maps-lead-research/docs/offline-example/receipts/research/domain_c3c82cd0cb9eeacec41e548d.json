@@ -1,0 +1,159 @@
+{
+  "job": {
+    "company_id": "co_cf3925d9a73da65dfb22409c",
+    "domain": "example.com",
+    "url": "https://example.com/"
+  },
+  "receipt": {
+    "status": "complete",
+    "reused": false,
+    "pages": [
+      {
+        "url": "https://example.com/",
+        "html": "",
+        "markdown": "# Example Sign Company\nWe manufacture and install commercial signs in Seattle.\n[Meet our leadership](/team)\nContact our office: info@example.com",
+        "timestamp": "2026-09-09T04:00:46+00:00",
+        "raw_path": "raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-1.json"
+      },
+      {
+        "url": "https://example.com/team",
+        "html": "<html><body><h1>Our leadership</h1><div>Jane Carter — President &amp; CEO <a href='mailto:jane.carter@example.com'>jane.carter@example.com</a></div><div>Alan Wilson — General Manager <a href='mailto:alan.wilson@example.com'>alan.wilson@example.com</a></div><p>We manufacture and install commercial signs in Seattle.</p></body></html>",
+        "markdown": "",
+        "timestamp": "2026-09-09T04:00:46+00:00",
+        "raw_path": "raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-2.json"
+      }
+    ],
+    "http_attempts": 0,
+    "firecrawl_attempts": 2,
+    "attempts": [
+      {
+        "provider": "firecrawl",
+        "url": "https://example.com/",
+        "status": "success",
+        "raw_path": "raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-1.json",
+        "timestamp": "2026-09-09T04:00:46+00:00"
+      },
+      {
+        "provider": "firecrawl",
+        "url": "https://example.com/team",
+        "status": "success",
+        "raw_path": "raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-2.json",
+        "timestamp": "2026-09-09T04:00:46+00:00"
+      }
+    ],
+    "reason": "",
+    "evidence": {
+      "contacts": [
+        {
+          "company_id": "co_cf3925d9a73da65dfb22409c",
+          "contact_id": "person_24ac68bb5d7e634ea626a934",
+          "name": "Jane Carter",
+          "exact_title": "President & CEO",
+          "role_category": "president",
+          "location_id": "",
+          "associated_location": "",
+          "current_role_source_url": "https://example.com/team",
+          "team_bio_url": "https://example.com/team",
+          "professional_profile_url": "",
+          "public_work_email": "jane.carter@example.com",
+          "public_business_phone": "",
+          "confidence": "source_backed",
+          "evidence_date": "2026-09-09T04:00:46+00:00",
+          "evidence_excerpt": "Jane Carter — President & CEO jane.carter@example.com"
+        },
+        {
+          "company_id": "co_cf3925d9a73da65dfb22409c",
+          "contact_id": "person_b1cb2f27c1f7ceb9c013ee65",
+          "name": "Alan Wilson",
+          "exact_title": "General Manager",
+          "role_category": "general_manager",
+          "location_id": "",
+          "associated_location": "",
+          "current_role_source_url": "https://example.com/team",
+          "team_bio_url": "https://example.com/team",
+          "professional_profile_url": "",
+          "public_work_email": "alan.wilson@example.com",
+          "public_business_phone": "",
+          "confidence": "source_backed",
+          "evidence_date": "2026-09-09T04:00:46+00:00",
+          "evidence_excerpt": "Alan Wilson — General Manager alan.wilson@example.com"
+        }
+      ],
+      "emails": [
+        {
+          "email_id": "email_a0441103f3341eb8bcc3b282",
+          "company_id": "co_cf3925d9a73da65dfb22409c",
+          "contact_id": "person_b1cb2f27c1f7ceb9c013ee65",
+          "email": "alan.wilson@example.com",
+          "status": "public_named_email",
+          "provenance": "public_source",
+          "deliverability": "unverified",
+          "source_url": "https://example.com/team",
+          "pattern_evidence": [],
+          "evidence_date": "2026-09-09T04:00:46+00:00"
+        },
+        {
+          "email_id": "email_93e4e97e4e44987b535d9e8e",
+          "company_id": "co_cf3925d9a73da65dfb22409c",
+          "contact_id": "person_24ac68bb5d7e634ea626a934",
+          "email": "jane.carter@example.com",
+          "status": "public_named_email",
+          "provenance": "public_source",
+          "deliverability": "unverified",
+          "source_url": "https://example.com/team",
+          "pattern_evidence": [],
+          "evidence_date": "2026-09-09T04:00:46+00:00"
+        }
+      ],
+      "summary": "We manufacture and install commercial signs in Seattle.",
+      "service_mix": [
+        "commercial"
+      ],
+      "service_evidence": [
+        {
+          "text": "We manufacture and install commercial signs in Seattle.",
+          "source_url": "https://example.com/"
+        },
+        {
+          "text": "Alan Wilson — General Manager alan.wilson@example.com",
+          "source_url": "https://example.com/team"
+        },
+        {
+          "text": "We manufacture and install commercial signs in Seattle.",
+          "source_url": "https://example.com/team"
+        },
+        {
+          "text": "Alan Wilson — General Manager",
+          "source_url": "https://example.com/team"
+        }
+      ],
+      "source_relevance": "confirmed",
+      "relevance_evidence": [
+        {
+          "text": "We manufacture and install commercial signs in Seattle.",
+          "source_url": "https://example.com/"
+        },
+        {
+          "text": "We manufacture and install commercial signs in Seattle.",
+          "source_url": "https://example.com/team"
+        }
+      ],
+      "pages": [
+        {
+          "url": "https://example.com/",
+          "html": "",
+          "markdown": "# Example Sign Company\nWe manufacture and install commercial signs in Seattle.\n[Meet our leadership](/team)\nContact our office: info@example.com",
+          "timestamp": "2026-09-09T04:00:46+00:00",
+          "raw_path": "raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-1.json"
+        },
+        {
+          "url": "https://example.com/team",
+          "html": "<html><body><h1>Our leadership</h1><div>Jane Carter — President &amp; CEO <a href='mailto:jane.carter@example.com'>jane.carter@example.com</a></div><div>Alan Wilson — General Manager <a href='mailto:alan.wilson@example.com'>alan.wilson@example.com</a></div><p>We manufacture and install commercial signs in Seattle.</p></body></html>",
+          "markdown": "",
+          "timestamp": "2026-09-09T04:00:46+00:00",
+          "raw_path": "raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-2.json"
+        }
+      ]
+    }
+  }
+}

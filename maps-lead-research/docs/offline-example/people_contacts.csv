@@ -1,0 +1,3 @@
+contact_id,company_id,name,exact_title,role_category,location_id,associated_location,current_role_source_url,team_bio_url,professional_profile_url,public_work_email,public_business_phone,confidence,evidence_date,evidence_excerpt
+person_24ac68bb5d7e634ea626a934,co_cf3925d9a73da65dfb22409c,Jane Carter,President & CEO,president,,,https://example.com/team,https://example.com/team,,jane.carter@example.com,,source_backed,2026-09-09T04:00:46+00:00,Jane Carter — President & CEO jane.carter@example.com
+person_b1cb2f27c1f7ceb9c013ee65,co_cf3925d9a73da65dfb22409c,Alan Wilson,General Manager,general_manager,,,https://example.com/team,https://example.com/team,,alan.wilson@example.com,,source_backed,2026-09-09T04:00:46+00:00,Alan Wilson — General Manager alan.wilson@example.com

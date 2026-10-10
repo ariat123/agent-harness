@@ -1,0 +1,4 @@
+provider,request_id,status,requested_at,raw_path,http_status,accounted_credits,provider_reported_credits,balance_before,balance_after
+rapidapi_maps,request_0a3efa25d13a41dea68ad998,success,2026-09-09T04:00:46+00:00,raw/maps/000001.json,,,,,
+firecrawl,fc_90b54f55b386bc4308594237,success,2026-09-09T04:00:46+00:00,./docs/offline-example/raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-1.json,,1,,100,99
+firecrawl,fc_2c98b1cdb1036c6e15c42b31,success,2026-09-09T04:00:46+00:00,./docs/offline-example/raw/firecrawl/domain_c3c82cd0cb9eeacec41e548d-2.json,,1,,99,98

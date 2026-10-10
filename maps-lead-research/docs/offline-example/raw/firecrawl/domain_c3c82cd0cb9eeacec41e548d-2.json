@@ -1,0 +1,15 @@
+{
+  "url": "https://example.com/team",
+  "success": true,
+  "payload": {
+    "success": true,
+    "data": {
+      "html": "<html><body><h1>Our leadership</h1><div>Jane Carter — President &amp; CEO <a href='mailto:jane.carter@example.com'>jane.carter@example.com</a></div><div>Alan Wilson — General Manager <a href='mailto:alan.wilson@example.com'>alan.wilson@example.com</a></div><p>We manufacture and install commercial signs in Seattle.</p></body></html>",
+      "metadata": {
+        "sourceURL": "https://example.com/team",
+        "statusCode": 200
+      }
+    }
+  },
+  "requested_at": "2026-09-09T04:00:46+00:00"
+}

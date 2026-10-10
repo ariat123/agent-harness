@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "country": "US",
+  "targets": [
+    {
+      "value": "Seattle, WA",
+      "state": "WA",
+      "region": "West",
+      "tier": 0
+    }
+  ],
+  "planned_states": [
+    "WA"
+  ],
+  "planned_regions": [
+    "West"
+  ],
+  "exhaustion_policy": "stop with target shortfall after configured markets/pages; add explicit targets to expand"
+}

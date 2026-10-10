@@ -1,0 +1,15 @@
+{
+  "url": "https://example.com/",
+  "success": true,
+  "payload": {
+    "success": true,
+    "data": {
+      "markdown": "# Example Sign Company\nWe manufacture and install commercial signs in Seattle.\n[Meet our leadership](/team)\nContact our office: info@example.com",
+      "metadata": {
+        "sourceURL": "https://example.com/",
+        "statusCode": 200
+      }
+    }
+  },
+  "requested_at": "2026-09-09T04:00:46+00:00"
+}

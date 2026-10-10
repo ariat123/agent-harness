@@ -1,0 +1,6 @@
+interface:
+  display_name: "Cold Email B2B"
+  short_description: "Evidence-led B2B cold email operations"
+  default_prompt: "Use $cold-email-b2b to draft or review B2B outreach for the named business using its audience, offer, proof, sender identity, and operating constraints."
+policy:
+  allow_implicit_invocation: true

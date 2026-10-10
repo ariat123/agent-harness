@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "campaign": "offline-fictional-example",
+  "business_category": "commercial signs",
+  "queries": [
+    "commercial signs"
+  ],
+  "suggest_related_queries": false,
+  "country": "US",
+  "language": "en",
+  "geography": {
+    "mode": "cities",
+    "targets": [
+      "Seattle, WA"
+    ],
+    "states": [],
+    "regions": [],
+    "include_states": [],
+    "exclude_states": []
+  },
+  "max_net_new_companies": 1,
+  "min_reviews": 5,
+  "max_reviews": null,
+  "max_contacts_per_company": 2,
+  "max_emails_per_company": 2,
+  "max_maps_requests": 2,
+  "max_pages_per_search": 3,
+  "maps_interval_seconds": 1,
+  "max_retries": 3,
+  "max_firecrawl_credit_delta": 2,
+  "firecrawl_safety_reserve": 10,
+  "max_firecrawl_pages_per_domain": 2,
+  "max_http_pages_per_domain": 1,
+  "decision_maker_roles": [
+    "owner",
+    "founder",
+    "president",
+    "ceo",
+    "principal",
+    "general_manager",
+    "regional_manager",
+    "operations",
+    "sales",
+    "marketing"
+  ],
+  "resume_policy": "retry_failed",
+  "refresh_research": false,
+  "output_directory": "./docs/offline-example",
+  "historical_registry_path": "./docs/offline-example-registry.sqlite",
+  "suppression_path": null
+}

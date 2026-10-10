@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "valid": true,
+  "errors": [],
+  "observed_records": 1,
+  "dispositions": {
+    "included": 1
+  },
+  "reconciled_records": 1,
+  "net_new_companies": 1,
+  "output_counts": {
+    "companies.csv": 1,
+    "locations.csv": 1,
+    "company_campaign_memberships.csv": 1,
+    "people_contacts.csv": 2,
+    "email_candidates.csv": 2,
+    "already_found.csv": 0,
+    "objective_exclusions.csv": 0,
+    "duplicates.csv": 0,
+    "discovery_observations.csv": 1,
+    "research_gaps.csv": 0,
+    "firecrawl_backlog.csv": 0,
+    "email_verification_upload.csv": 2,
+    "provider_usage_ledger.csv": 3
+  },
+  "maps_request_attempts": 1,
+  "verification_calls": 0,
+  "network_used_for_export": false
+}
