@@ -14,6 +14,7 @@ This is how I run my agency's work on AI agents: the skills my agents follow, th
 | `signal-opportunity-handoffs` | Builds opportunity packets for clients: cited evidence, named contacts, and a clear pursue, hold, or reject call for each one. |
 | `account-specific-b2b-outreach` | Turns account research into natural, source-backed outreach for a specific offer. |
 | `cold-email-b2b` | Writes and reviews cold email and diagnoses campaign and reply data. |
+| `account-profile` | Drafts the Account Profile page of a GitLab account plan from public sources, built on GitLab's public handbook. Three sample runs and a pilot plan. See [`account-profile/`](account-profile/). |
 
 **`maps-lead-research/`**: the Python pipeline behind most of my research. It turns a business category and a geography into a researched list of companies, locations, decision makers, and email candidates. Google Maps data (through RapidAPI) handles discovery, Firecrawl handles websites and people search, and SQLite keeps a shared history so nothing gets researched twice. It has 54 tests, and it runs on fake sample data with no API keys.
 
