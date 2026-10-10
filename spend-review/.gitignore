@@ -1,0 +1,7 @@
+# Private: folder names, titles, labels and per-thread rows
+*.local.json
+*.local.csv
+out/threads.local.csv
+__pycache__/
+.vercel/
+out-nojob/threads.local.csv

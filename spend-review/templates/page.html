@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Spend to Shipped</title>
+<meta name="description" content="30 days of one person's Codex and Claude Code spend, priced at list rates and joined to what shipped.">
+<style>
+:root{
+  --bg:#f7f6f2;--card:#ffffff;--ink:#15171b;--muted:#5d6470;--faint:#7d838c;--line:#e3e1da;
+  --accent:#b4471d;--accent-soft:#fbeee7;--chip:#efede6;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--s6:#8a8f98;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417;--card:#1b1e23;--ink:#eceae5;--muted:#a7adb6;--faint:#8a9099;--line:#2c3037;
+    --accent:#f08a5d;--accent-soft:#33221a;--chip:#262a31;
+    --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#7d838c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417;--card:#1b1e23;--ink:#eceae5;--muted:#a7adb6;--faint:#8a9099;--line:#2c3037;
+  --accent:#f08a5d;--accent-soft:#33221a;--chip:#262a31;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#7d838c;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-underline-offset:2px}
+main{max-width:860px;margin:0 auto;padding:40px 16px 72px}
+.eyebrow{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 14px}
+h1{font-size:clamp(1.7rem,5.2vw,2.45rem);line-height:1.15;margin:0 0 16px;letter-spacing:-.015em;font-weight:750}
+.lede{font-size:1.1rem;color:var(--muted);margin:0 0 6px;max-width:42em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.stat b{display:block;font-size:1.85rem;line-height:1.1;font-weight:750;letter-spacing:-.02em}
+.stat span{display:block;font-size:.88rem;color:var(--muted);margin-top:6px;line-height:1.4}
+.note{font-size:.9rem;color:var(--muted);background:var(--chip);border-radius:10px;padding:12px 14px;margin:0 0 44px}
+h2{font-size:1.35rem;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 18px;font-size:.98rem}
+section{margin:0 0 48px}
+.tbl{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:650}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
+.small{font-size:.86rem;color:var(--faint);margin:10px 0 0}
+.items{display:grid;gap:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.item h3{font-size:1.04rem;margin:0 0 6px;line-height:1.35}
+.item p{margin:0;color:var(--muted)}
+.item p b{color:var(--ink)}
+.tag{display:inline-block;font-size:.72rem;font-weight:650;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:2px 7px;margin:0 0 8px;background:var(--accent-soft);color:var(--accent)}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;position:relative}
+.chart h3{font-size:1rem;margin:0 0 2px}
+.chart .cap{font-size:.86rem;color:var(--muted);margin:0 0 10px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted);margin:0 0 8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:.8rem;line-height:1.4;border-radius:8px;padding:8px 10px;opacity:0;transition:opacity .1s;white-space:nowrap;z-index:2}
+details{margin-top:10px;font-size:.88rem;color:var(--muted)}
+summary{cursor:pointer}
+#tablewrap{overflow-x:auto}
+details table{border-collapse:collapse;margin-top:8px;font-variant-numeric:tabular-nums}
+details td,details th{padding:3px 10px 3px 0;text-align:left}
+ul.plain{margin:8px 0 0;padding-left:20px;color:var(--muted)}
+ul.plain li{margin:6px 0}
+ul.plain b{color:var(--ink)}
+pre{background:var(--chip);border-radius:10px;padding:12px 14px;overflow-x:auto;font-size:.82rem;line-height:1.5;margin:12px 0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.method{font-size:.92rem;color:var(--muted)}
+.method li{margin:7px 0}
+footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padding-top:18px}
+@media (max-width:720px){
+  .stats{grid-template-columns:1fr 1fr}
+  .stat b{font-size:1.55rem}
+}
+@media (max-width:560px){
+  .tbl thead{display:none}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl tr{border-bottom:1px solid var(--line);padding:8px 0}
+  .tbl td{border:0;padding:3px 14px}
+  .tbl td:first-child{font-weight:650;padding-top:8px}
+  .tbl td[data-l]::before{content:attr(data-l) ": ";color:var(--faint);font-size:.85rem}
+  .tbl td.n{white-space:normal}
+}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">Spend-to-shipped review · Sept 10 to Oct 9, 2026</p>
+<h1>30 days of my agent spend, joined to what shipped</h1>
+<p class="lede">The review I'd run each week for every person at Firecrawl: who's burning tokens without output, and who isn't using enough. Here it runs on the one person whose logs I have, me. It covers my Codex and Claude Code work sessions for the month.</p>
+
+<div class="stats">
+  <div class="stat"><b>96%</b><span>of spend went to threads that shipped something</span></div>
+  <div class="stat"><b>$1.79</b><span>per contact loaded into an outbound campaign</span></div>
+  <div class="stat"><b>$37</b><span>median per finished prospect packet, from $16 to $226</span></div>
+  <div class="stat"><b>68%</b><span>lower cost per token after Codex moved to gpt-6.1-sol on Sept 29, while daily volume tripled</span></div>
+</div>
+<p class="note">Dollar figures are list-price estimates: what these tokens would cost at public API rates, checked Oct 9, 2026. I pay flat subscriptions, so this isn't my bill. It's the number a team on API billing would manage. The month comes to about $3,800 at list price for 9.9 billion tokens, 95% of them cache reads.</p>
+
+<section>
+<h2>Where it went and what came out</h2>
+<p class="sub">Shipped means a record exists (an upload in my campaign database, or finished files on disk), or it's my call where no record exists.</p>
+<table class="tbl">
+<thead><tr><th>Workstream</th><th>Share of spend</th><th>What shipped</th><th>Cost per item</th><th>No output on record</th></tr></thead>
+<tbody>
+<tr><td>Outbound research and campaigns</td><td class="n" data-l="Share">81%</td><td data-l="Shipped">Contacts loaded into campaigns</td><td class="n" data-l="Per item">$1.79 per contact</td><td class="n" data-l="No record">0%</td></tr>
+<tr><td>Prospect and client packets</td><td class="n" data-l="Share">19%</td><td data-l="Shipped">Finished prospect packets</td><td class="n" data-l="Per item">$37 median, $56 average</td><td class="n" data-l="No record">2%</td></tr>
+<tr><td>Harness upkeep</td><td class="n" data-l="Share">Under 1%</td><td data-l="Shipped">Handoff files and setup</td><td class="n" data-l="Per item">n/a</td><td class="n" data-l="No record">75% (about $16)</td></tr>
+</tbody>
+</table>
+<p class="small">Cost per item divides all of a workstream's spend, including threads with no output, by what it shipped.</p>
+</section>
+
+<section>
+<h2>Burning without output</h2>
+<p class="sub">Work that shipped, but cost far more than the output needed.</p>
+<div class="items">
+  <div class="item"><span class="tag">Too much spend for the output</span><h3>One thread was 23% of the month</h3><p>It ran for 29 days and re-read its own history on every turn: <b>96%</b> of its tokens were cache reads, and <b>58%</b> of its cost came from gpt-6-astra. It did ship. But the same tokens on gpt-6.1-sol would have cost <b>$365 instead of $860</b>, and a fresh thread each week from a handoff file would cut the re-reading too.</p></div>
+  <div class="item"><span class="tag">Too much spend for the output</span><h3>Same deliverable, 14x cost spread</h3><p>Finished prospect packets cost <b>$16 to $226</b>. The $226 one ran 18 days through many revision rounds. Agreeing on the brief up front is cheaper than a revision loop.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Not using enough</h2>
+<p class="sub">The JD says this is usually the bigger problem. My read of my own data:</p>
+<div class="items">
+  <div class="item"><span class="tag">Under-used</span><h3>The cheap tier barely ran</h3><p>gpt-6-luna lists at a twentieth of gpt-6.1-sol's price and carried <b>1% of tokens</b>. Mechanical steps like formatting, counting and extraction can run there with Sol checking the output, the same screen-then-audit setup I already use for evidence checks.</p></div>
+</div>
+</section>
+
+<section>
+<h2>What changed</h2>
+<div class="chart" id="chart">
+  <h3>Daily cost at list price, by model</h3>
+  <p class="cap">Cost per million tokens: $0.70 (Sept 10 to 21), $0.22 (Sept 29 to Oct 9). Daily tokens went from about 150M to about 470M. Daily cost stayed near $100 to $105.</p>
+  <div class="legend" id="legend"></div>
+  <svg id="bars" role="img" aria-label="Daily list-price cost by model, Sept 10 to Oct 9, 2026. Spend shifts from gpt-5.6-sol to gpt-6.1-sol after Sept 29, with a gpt-6-astra peak in late September."></svg>
+  <div class="tip" id="tip"></div>
+  <details><summary>Show as a table</summary><div id="tablewrap"></div></details>
+</div>
+<ul class="plain">
+  <li><b>Every thread moved to gpt-6.1-sol on Sept 29.</b> Cost per token fell 68% while daily volume tripled. Had every Codex request run at gpt-6.1-sol prices, the month would have cost about $2,000 instead of $3,800.</li>
+  <li><b>A cheaper model screens and a stronger one audits.</b> In one niche the stronger model overturned half of the cheaper model's calls, so stronger review is the default for evidence checks.</li>
+  <li><b>Routine pipeline steps are plain Python.</b> Discovery, deduplication, extraction and exports don't call a model.</li>
+  <li><b>When a sourcing provider's credits ran out mid-project</b>, I stopped paid sourcing and worked the records I already had.</li>
+  <li><b>Added a session-end hook</b> (below), so next month's outcomes come from tags instead of my hand labels.</li>
+</ul>
+</section>
+
+<section>
+<h2>Running it for a team</h2>
+<p class="sub">How I'd run this at Firecrawl. It's a plan: I haven't rolled it out across a team yet.</p>
+<p>Each week, pull usage per person from the admin exports of each AI tool the team uses: spend by model, cached versus fresh input, output. Join it to what each team already calls shipped: merged PRs for engineering, meetings booked and accounts worked for revenue, contracts turned for legal. Each pattern starts a different conversation:</p>
+<ul class="plain">
+  <li><b>High spend, nothing shipped:</b> sit with them on one stuck thread. It's usually a loop, a missing brief or the wrong model.</li>
+  <li><b>Steady output, little spend:</b> find the task they still do by hand and build the first workflow with them.</li>
+  <li><b>Expensive model on routine work:</b> change the default, not the person.</li>
+  <li><b>One thread running for weeks:</b> start fresh each week from a handoff file.</li>
+</ul>
+</section>
+
+<section>
+<h2>The hook</h2>
+<p>A Claude Code <code>SessionEnd</code> hook adds one line per session to a local ledger: tokens, list-price cost, and an outcome tag the person or the agent writes before closing. It reads only the tag line, never the conversation. The review reads the ledger, so untagged spend shows up as its own number.</p>
+<pre><code>OUTCOME: shipped - pricing page copy merged</code></pre>
+<pre><code>{"hooks": {"SessionEnd": [{"hooks": [
+  {"type": "command", "command": "python3 spend-review/hooks/outcome_tag.py"}]}]}}</code></pre>
+<p>Code, tests and method: <a href="__REPO_URL__">__REPO_LABEL__</a></p>
+</section>
+
+<section class="method">
+<h2>Method</h2>
+<ul>
+  <li><b>Logs:</b> local Codex session files and Claude Code transcripts, Sept 10 to Oct 9, 2026, Pacific time. 51 top-level threads and 67,501 model requests. Helper agents and approval checks count toward the thread that started them. Personal threads are left out.</li>
+  <li><b>Counting:</b> Codex keeps a running token total per thread. The review counts each increase, treats a drop as a restart, and merges threads that span files. Claude Code logs a response once per content block, so responses are counted once by message ID. Summing request by request lands within 3% of the running totals; the page uses the running totals, the higher figure.</li>
+  <li><b>Prices:</b> public Standard-tier rates from <a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> and <a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a>, checked Oct 9, 2026. No request went over 272K input tokens, so short-context rates apply. Codex's built-in approval reviewer has no public price, so its 8% of tokens are counted but left out of dollar figures.</li>
+  <li><b>Outcomes:</b> campaign uploads from my campaign database and finished files on disk for packets. Where no record exists, the label is my call.</li>
+  <li><b>Left out:</b> prompts, messages, file paths, and client or prospect names. Only token counts, models, timestamps and workstream labels are used.</li>
+</ul>
+</section>
+
+<footer>Aria Tabatabai · Built Oct 9, 2026 from local logs. Aggregates only.</footer>
+</main>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+  var raw = JSON.parse(document.getElementById('data').textContent);
+  var series = [
+    {key:'gpt-5.6-sol', label:'gpt-5.6-sol', c:'--s1'},
+    {key:'gpt-6-sol', label:'gpt-6-sol', c:'--s2'},
+    {key:'gpt-6.1-sol', label:'gpt-6.1-sol', c:'--s3'},
+    {key:'gpt-6-astra', label:'gpt-6-astra', c:'--s4'},
+    {key:'claude-opus-5-5', label:'Claude Opus 5.5', c:'--s5'},
+    {key:'other', label:'Other', c:'--s6'}
+  ];
+  var known = {}; series.forEach(function(s){ known[s.key] = 1; });
+  var days = Object.keys(raw).sort();
+  var rows = days.map(function(d){
+    var r = {day:d, total:0}; series.forEach(function(s){ r[s.key] = 0; });
+    Object.keys(raw[d]).forEach(function(m){ var k = known[m] ? m : 'other'; r[k] += raw[d][m]; r.total += raw[d][m]; });
+    return r;
+  });
+  var css = getComputedStyle(document.documentElement);
+  function col(v){ return css.getPropertyValue(v).trim(); }
+  var lg = document.getElementById('legend');
+  series.forEach(function(s){ var e = document.createElement('span'); e.innerHTML = '<i style="background:var(' + s.c + ')"></i>' + s.label; lg.appendChild(e); });
+
+  var svg = document.getElementById('bars'), ns = 'http://www.w3.org/2000/svg';
+  var W = Math.max(320, Math.round(svg.getBoundingClientRect().width) || 800), narrow = W < 560;
+  var H = narrow ? 230 : 260, padL = 40, padB = 26, padT = 8, step = narrow ? 7 : 5;
+  var max = Math.max.apply(null, rows.map(function(r){ return r.total; }));
+  var top = Math.ceil(max / 100) * 100;
+  var bw = (W - padL) / rows.length, gap = Math.max(2, bw * 0.22);
+  var y = function(v){ return padT + (H - padT - padB) * (1 - v / top); };
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  function el(t, a){ var e = document.createElementNS(ns, t); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  for (var g = 0; g <= top; g += 100) {
+    svg.appendChild(el('line', {x1:padL, x2:W, y1:y(g), y2:y(g), stroke:col('--line'), 'stroke-width':1}));
+    var t = el('text', {x:padL - 6, y:y(g) + 4, 'text-anchor':'end', 'font-size':11, fill:col('--faint')}); t.textContent = '$' + g; svg.appendChild(t);
+  }
+  rows.forEach(function(r, i){
+    var x = padL + i * bw + gap / 2, w = bw - gap, base = H - padB, grp = el('g', {});
+    series.forEach(function(s){
+      var v = r[s.key]; if (v <= 0) return;
+      var h = (H - padT - padB) * v / top; if (h < 0.5) return;
+      grp.appendChild(el('rect', {x:x, y:base - h, width:w, height:Math.max(h - 1, 0.5), fill:col(s.c), rx:1.5}));
+      base -= h;
+    });
+    var hit = el('rect', {x:padL + i * bw, y:padT, width:bw, height:H - padT - padB, fill:'transparent'});
+    hit.addEventListener('mouseenter', function(){ show(i); }); hit.addEventListener('mouseleave', hide);
+    grp.appendChild(hit); svg.appendChild(grp);
+    if ((i % step === 0 && rows.length - 1 - i >= step / 2) || i === rows.length - 1) {
+      var lt = el('text', {x:x + w / 2, y:H - 8, 'text-anchor':'middle', 'font-size':11, fill:col('--faint')});
+      lt.textContent = r.day.slice(5).replace('-', '/'); svg.appendChild(lt);
+    }
+  });
+  var sw = rows.findIndex(function(r){ return r.day === '2026-09-29'; });
+  if (sw >= 0) {
+    var sx = padL + sw * bw;
+    svg.appendChild(el('line', {x1:sx, x2:sx, y1:padT, y2:H - padB, stroke:col('--muted'), 'stroke-width':1.5, 'stroke-dasharray':'4 3'}));
+    var at = el('text', {x:narrow ? sx - 6 : sx + 6, y:padT + 12, 'text-anchor':narrow ? 'end' : 'start', 'font-size':12, fill:col('--muted')});
+    at.textContent = 'Moved to gpt-6.1-sol'; svg.appendChild(at);
+  }
+  var tip = document.getElementById('tip'), box = document.getElementById('chart');
+  function show(i){
+    var r = rows[i], lines = ['<b>' + r.day.slice(5).replace('-', '/') + '</b>  $' + Math.round(r.total)];
+    series.forEach(function(s){ if (r[s.key] >= 1) lines.push(s.label + ': $' + Math.round(r[s.key])); });
+    tip.innerHTML = lines.join('<br>');
+    var rect = svg.getBoundingClientRect(), bx = box.getBoundingClientRect();
+    var px = rect.left - bx.left + (padL + (i + 0.5) * bw) * rect.width / W;
+    var left = Math.min(Math.max(px - 70, 4), bx.width - tip.offsetWidth - 4);
+    tip.style.left = left + 'px'; tip.style.top = (rect.top - bx.top + 8) + 'px'; tip.style.opacity = 1;
+  }
+  function hide(){ tip.style.opacity = 0; }
+  var html = '<table><tr><th>Day</th><th>Total</th>' + series.map(function(s){ return '<th>' + s.label + '</th>'; }).join('') + '</tr>';
+  rows.forEach(function(r){ html += '<tr><td>' + r.day.slice(5) + '</td><td>$' + Math.round(r.total) + '</td>' + series.map(function(s){ return '<td>$' + Math.round(r[s.key]) + '</td>'; }).join('') + '</tr>'; });
+  document.getElementById('tablewrap').innerHTML = html + '</table>';
+})();
+</script>
+</body>
+</html>

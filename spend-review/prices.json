@@ -1,0 +1,25 @@
+{
+  "_note": "USD per 1M tokens, public Standard-tier list prices. Accessed 2026-10-09. These are list-price equivalents: the account behind these logs pays through flat subscriptions, not per token.",
+  "sources": {
+    "openai": "https://developers.openai.com/api/docs/pricing (Standard pricing table, short context <=272K input tokens; long context >272K)",
+    "anthropic": "https://platform.claude.com/docs/en/about-claude/pricing (Model pricing table; Fast mode table)"
+  },
+  "accessed": "2026-10-09",
+  "openai": {
+    "gpt-6.1-sol":   {"input": 2.00,  "cached": 0.10, "output": 10.00, "long": {"input": 4.00,  "cached": 0.20, "output": 15.00}},
+    "gpt-6-sol":     {"input": 2.00,  "cached": 0.20, "output": 10.00, "long": {"input": 4.00,  "cached": 0.40, "output": 15.00}},
+    "gpt-5.6-sol":   {"input": 4.00,  "cached": 0.40, "output": 20.00, "long": {"input": 8.00,  "cached": 0.80, "output": 30.00}},
+    "gpt-6-astra":   {"input": 10.00, "cached": 1.00, "output": 50.00, "long": {"input": 20.00, "cached": 2.00, "output": 75.00}},
+    "gpt-6-luna":    {"input": 0.10,  "cached": 0.01, "output": 0.50,  "long": {"input": 0.20,  "cached": 0.02, "output": 0.75}},
+    "gpt-5.6-terra": {"input": 2.00,  "cached": 0.20, "output": 12.00, "long": {"input": 4.00,  "cached": 0.40, "output": 18.00}},
+    "gpt-5.5":       {"input": 5.00,  "cached": 0.50, "output": 30.00, "long": {"input": 10.00, "cached": 1.00, "output": 45.00}}
+  },
+  "openai_long_context_threshold": 272000,
+  "anthropic": {
+    "claude-opus-5-5": {"input": 4.00, "cache_write_5m": 5.00, "cache_write_1h": 8.00, "cache_read": 0.20, "output": 20.00,
+                        "fast": {"input": 8.00, "cache_write_5m": 10.00, "cache_write_1h": 16.00, "cache_read": 0.40, "output": 40.00}}
+  },
+  "unpriced": {
+    "codex-auto-review": "Codex's built-in approval reviewer. No public list price, so its tokens are counted but left out of dollar figures."
+  }
+}

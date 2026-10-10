@@ -17,6 +17,10 @@ This is how I run my agency's work on AI agents: the skills my agents follow, th
 
 **`maps-lead-research/`**: the Python pipeline behind most of my research. It turns a business category and a geography into a researched list of companies, locations, decision makers, and email candidates. Google Maps data (through RapidAPI) handles discovery, Firecrawl handles websites and people search, and SQLite keeps a shared history so nothing gets researched twice. It has 54 tests, and it runs on fake sample data with no API keys.
 
+**`spend-review/`**: a weekly review of agent spend. It shows where the tokens went, what they cost at list price, and what shipped because of them, and it runs on local Codex and Claude Code logs. It includes a Claude Code session-end hook that tags each session's outcome. [The page from my own month](https://spend-to-shipped-review.vercel.app).
+
+**Related:** [official-statement-reader](https://github.com/ariat123/official-statement-reader) is a skill that reads a municipal bond official statement and cites the page behind every line. It's tested on a deal I worked on in investment banking at KeyBanc.
+
 ## How the work is split
 
 - **Codex** is my main builder: the pipelines, repos, tests, and most of the heavy data work.

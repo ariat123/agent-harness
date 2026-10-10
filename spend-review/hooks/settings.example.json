@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /path/to/spend-review/hooks/outcome_tag.py"
+          }
+        ]
+      }
+    ]
+  }
+}
