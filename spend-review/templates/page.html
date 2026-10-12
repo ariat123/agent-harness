@@ -71,7 +71,6 @@ pre{background:var(--chip);border-radius:10px;padding:12px 14px;overflow-x:auto;
 code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .method{font-size:.92rem;color:var(--muted)}
 .method li{margin:7px 0}
-footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padding-top:18px}
 @media (max-width:720px){
   .stats{grid-template-columns:1fr 1fr}
   .stat b{font-size:1.55rem}
@@ -91,7 +90,7 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
 <main>
 <p class="eyebrow">Spend-to-shipped review · Sept 10 to Oct 9, 2026</p>
 <h1>30 days of my agent spend, joined to what shipped</h1>
-<p class="lede">The review I'd run each week for every person at Firecrawl: who's burning tokens without output, and who isn't using enough. Here it runs on the one person whose logs I have, me. It covers my Codex and Claude Code work sessions for the month.</p>
+<p class="lede">This is the review I'd run each week for every person at Firecrawl, to see who's burning tokens without output and who isn't using enough. Here it runs on my own Codex and Claude Code logs.</p>
 
 <div class="stats">
   <div class="stat"><b>96%</b><span>of spend went to threads that shipped something</span></div>
@@ -99,11 +98,11 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
   <div class="stat"><b>$37</b><span>median per finished prospect packet, from $16 to $226</span></div>
   <div class="stat"><b>68%</b><span>lower cost per token after Codex moved to gpt-6.1-sol on Sept 29, while daily volume tripled</span></div>
 </div>
-<p class="note">Dollar figures are list-price estimates: what these tokens would cost at public API rates, checked Oct 9, 2026. I pay flat subscriptions, so this isn't my bill. It's the number a team on API billing would manage. The month comes to about $3,800 at list price for 9.9 billion tokens, 95% of them cache reads.</p>
+<p class="note">Dollar figures are what these tokens would cost at public API rates. I pay flat subscriptions, so this isn't my bill. The month comes to about $3,800 for 9.9 billion tokens, 95% of them cache reads.</p>
 
 <section>
 <h2>Where it went and what came out</h2>
-<p class="sub">Shipped means a record exists (an upload in my campaign database, or finished files on disk), or it's my call where no record exists.</p>
+<p class="sub">Shipped means there's a record (an upload in my campaign database, or finished files on disk). Where there isn't, it's my call.</p>
 <table class="tbl">
 <thead><tr><th>Workstream</th><th>Share of spend</th><th>What shipped</th><th>Cost per item</th><th>No output on record</th></tr></thead>
 <tbody>
@@ -112,7 +111,7 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
 <tr><td>Harness upkeep</td><td class="n" data-l="Share">Under 1%</td><td data-l="Shipped">Handoff files and setup</td><td class="n" data-l="Per item">n/a</td><td class="n" data-l="No record">75% (about $16)</td></tr>
 </tbody>
 </table>
-<p class="small">Cost per item divides all of a workstream's spend, including threads with no output, by what it shipped.</p>
+<p class="small">Cost per item includes the threads with no output.</p>
 </section>
 
 <section>
@@ -126,7 +125,7 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
 
 <section>
 <h2>Not using enough</h2>
-<p class="sub">The JD says this is usually the bigger problem. My read of my own data:</p>
+<p class="sub">The JD says this is usually the bigger problem.</p>
 <div class="items">
   <div class="item"><span class="tag">Under-used</span><h3>The cheap tier barely ran</h3><p>gpt-6-luna lists at a twentieth of gpt-6.1-sol's price and carried <b>1% of tokens</b>. Mechanical steps like formatting, counting and extraction can run there with Sol checking the output, the same screen-then-audit setup I already use for evidence checks.</p></div>
 </div>
@@ -143,7 +142,7 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
   <details><summary>Show as a table</summary><div id="tablewrap"></div></details>
 </div>
 <ul class="plain">
-  <li><b>Every thread moved to gpt-6.1-sol on Sept 29.</b> Cost per token fell 68% while daily volume tripled. Had every Codex request run at gpt-6.1-sol prices, the month would have cost about $2,000 instead of $3,800.</li>
+  <li><b>Every thread moved to gpt-6.1-sol on Sept 29.</b> Had every Codex request run at gpt-6.1-sol prices, the month would have cost about $2,000 instead of $3,800.</li>
   <li><b>A cheaper model screens and a stronger one audits.</b> In one niche the stronger model overturned half of the cheaper model's calls, so stronger review is the default for evidence checks.</li>
   <li><b>Routine pipeline steps are plain Python.</b> Discovery, deduplication, extraction and exports don't call a model.</li>
   <li><b>When a sourcing provider's credits ran out mid-project</b>, I stopped paid sourcing and worked the records I already had.</li>
@@ -153,8 +152,8 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
 
 <section>
 <h2>Running it for a team</h2>
-<p class="sub">How I'd run this at Firecrawl. It's a plan: I haven't rolled it out across a team yet.</p>
-<p>Each week, pull usage per person from the admin exports of each AI tool the team uses: spend by model, cached versus fresh input, output. Join it to what each team already calls shipped: merged PRs for engineering, meetings booked and accounts worked for revenue, contracts turned for legal. Each pattern starts a different conversation:</p>
+<p class="sub">It's a plan. I haven't rolled it out across a team yet.</p>
+<p>Each week, pull each person's usage from the team's AI tool exports and join it to what that team already calls shipped, like merged PRs or meetings booked. Each pattern starts a different conversation.</p>
 <ul class="plain">
   <li><b>High spend, nothing shipped:</b> sit with them on one stuck thread. It's usually a loop, a missing brief or the wrong model.</li>
   <li><b>Steady output, little spend:</b> find the task they still do by hand and build the first workflow with them.</li>
@@ -165,7 +164,7 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
 
 <section>
 <h2>The hook</h2>
-<p>A Claude Code <code>SessionEnd</code> hook adds one line per session to a local ledger: tokens, list-price cost, and an outcome tag the person or the agent writes before closing. It reads only the tag line, never the conversation. The review reads the ledger, so untagged spend shows up as its own number.</p>
+<p>A Claude Code <code>SessionEnd</code> hook adds a line per session to a local ledger with its tokens, cost and the outcome tag the person or agent writes before closing. It reads only the tag line, never the conversation. Untagged spend shows up as its own number.</p>
 <pre><code>OUTCOME: shipped - pricing page copy merged</code></pre>
 <pre><code>{"hooks": {"SessionEnd": [{"hooks": [
   {"type": "command", "command": "python3 spend-review/hooks/outcome_tag.py"}]}]}}</code></pre>
@@ -175,15 +174,11 @@ footer{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);padd
 <section class="method">
 <h2>Method</h2>
 <ul>
-  <li><b>Logs:</b> local Codex session files and Claude Code transcripts, Sept 10 to Oct 9, 2026, Pacific time. 51 top-level threads and 67,501 model requests. Helper agents and approval checks count toward the thread that started them. Personal threads are left out.</li>
-  <li><b>Counting:</b> Codex keeps a running token total per thread. The review counts each increase, treats a drop as a restart, and merges threads that span files. Claude Code logs a response once per content block, so responses are counted once by message ID. Summing request by request lands within 3% of the running totals; the page uses the running totals, the higher figure.</li>
-  <li><b>Prices:</b> public Standard-tier rates from <a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> and <a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a>, checked Oct 9, 2026. No request went over 272K input tokens, so short-context rates apply. Codex's built-in approval reviewer has no public price, so its 8% of tokens are counted but left out of dollar figures.</li>
-  <li><b>Outcomes:</b> campaign uploads from my campaign database and finished files on disk for packets. Where no record exists, the label is my call.</li>
-  <li><b>Left out:</b> prompts, messages, file paths, and client or prospect names. Only token counts, models, timestamps and workstream labels are used.</li>
+  <li><b>Logs:</b> 51 Codex and Claude Code threads (67,501 requests). Only token counts, models, timestamps and workstream labels, no prompts or names. Personal threads are left out.</li>
+  <li><b>Prices:</b> <a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> and <a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> list rates, checked Oct 9, 2026. Codex's approval reviewer has no public price, so its 8% of tokens aren't in the dollar figures.</li>
 </ul>
 </section>
 
-<footer>Aria Tabatabai · Built Oct 9, 2026 from local logs. Aggregates only.</footer>
 </main>
 <script id="data" type="application/json">__DATA__</script>
 <script>

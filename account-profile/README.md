@@ -1,6 +1,6 @@
 # Account Profile skill
 
-A Claude skill that drafts the **Account Profile** page of a GitLab account plan from public sources. An AE gives it a company name. It answers the eight Account Profile questions from GitLab's public [Account Planning](https://handbook.gitlab.com/handbook/sales/account-planning/#account-profile) page, maps the findings to GitLab's four [customer value drivers](https://handbook.gitlab.com/handbook/sales/command-of-the-message/#customer-value-drivers), and cites a dated source on every line. The AE reviews every line before any of it goes into the plan.
+A Claude skill that drafts the **Account Profile** page of a GitLab account plan from public sources, with a dated source on every line. It answers the eight questions from GitLab's [Account Planning](https://handbook.gitlab.com/handbook/sales/account-planning/#account-profile) page and ties them to the four [customer value drivers](https://handbook.gitlab.com/handbook/sales/command-of-the-message/#customer-value-drivers).
 
 **[Read the samples and pilot plan (PDF, 5 pages)](account-profile-samples.pdf)**
 
@@ -12,7 +12,7 @@ A Claude skill that drafts the **Account Profile** page of a GitLab account plan
 | Deere & Company | No public story, so "AE to fill from Salesforce" | [deere.md](samples/deere.md) |
 | Capital One | No public story, so "AE to fill from Salesforce" | [capital-one.md](samples/capital-one.md) |
 
-Every line in the samples was checked against its source on 2026-10-10. That check corrected 21 of about 140 lines (none was an invented fact), and all three pass `evals/check_profile.py`. Details in [evals/RESULTS.md](evals/RESULTS.md).
+Every sample line was checked against its source on 2026-10-10. The check fixed 21 of about 140 lines, none of them invented, and all three pass `evals/check_profile.py` ([evals/RESULTS.md](evals/RESULTS.md)).
 
 ## Every rule comes from a handbook page
 
@@ -49,7 +49,7 @@ PILOT_PLAN.md                    five field champions, four weeks, Field Enablem
 
 ## Use it
 
-Load the folder as a skill in Claude (or Claude Code), then ask: "Draft the Account Profile for <company>." Check a draft with:
+Load the folder as a skill in Claude (or Claude Code), then ask: `Draft the Account Profile for <company>.` Check a draft with:
 
 ```bash
 python3 evals/check_profile.py samples/*.md
@@ -61,4 +61,4 @@ python3 evals/check_profile.py samples/*.md
 - It stops before relationship mapping, whitespace mapping, and the action plan.
 - The pilot plan is a proposal. No GitLab rep has used this skill, and no time savings are claimed.
 
-Built on GitLab's public handbook (accessed 2026-10-10). Not affiliated with or endorsed by GitLab.
+Not affiliated with or endorsed by GitLab.
